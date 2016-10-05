@@ -1,0 +1,78 @@
+[ 2016-10-05T15:40:30+08:00 ] ::1 /codes/ThinkPhpDemo/admin.php/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000408s ]
+ERR: 无法加载模块:Index
+
+[ 2016-10-05T15:40:40+08:00 ] ::1 /codes/ThinkPhpDemo/admin.php?m=Admin?c=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000171s ]
+ERR: 无法加载模块:Admin?c=index
+
+[ 2016-10-05T15:40:45+08:00 ] ::1 /codes/ThinkPhpDemo/admin.php?m=Admin?c=admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000210s ]
+ERR: 无法加载模块:Admin?c=admin
+
+[ 2016-10-05T15:40:51+08:00 ] ::1 /codes/ThinkPhpDemo/admin.php?m=Index?c=admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000218s ]
+ERR: 无法加载模块:Index?c=admin
+
+[ 2016-10-05T15:40:54+08:00 ] ::1 /codes/ThinkPhpDemo/admin.php?m=Index?c=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+ERR: 无法加载模块:Index?c=index
+
+[ 2016-10-05T15:41:09+08:00 ] ::1 /codes/ThinkPhpDemo/admin.php?m=home?c=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000158s ]
+ERR: 无法加载模块:Home?c=index
+
+[ 2016-10-05T15:41:21+08:00 ] ::1 /codes/ThinkPhpDemo/admin.php?m=home?c=home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000153s ]
+ERR: 无法加载模块:Home?c=home
+
+[ 2016-10-05T15:41:23+08:00 ] ::1 /codes/ThinkPhpDemo/admin.php?m=home?c=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000170s ]
+ERR: 无法加载模块:Home?c=index
+
+[ 2016-10-05T15:41:26+08:00 ] ::1 /codes/ThinkPhpDemo/admin.php?m=index?c=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000153s ]
+ERR: 无法加载模块:Index?c=index
+
+[ 2016-10-05T15:57:24+08:00 ] ::1 /codes/ThinkPhpDemo/admin.php/test/id/4.shtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000159s ]
+ERR: 无法加载模块:Test
+
+[ 2016-10-05T15:57:32+08:00 ] ::1 /codes/ThinkPhpDemo/index.php/test/id/4.shtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000177s ]
+ERR: 无法加载模块:Test
+
+[ 2016-10-05T15:57:48+08:00 ] ::1 /codes/ThinkPhpDemo/admin.php/user
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000164s ]
+ERR: 无法加载模块:User
+
+[ 2016-10-05T15:57:59+08:00 ] ::1 /codes/ThinkPhpDemo/admin.php/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000351s ]
+ERR: 无法加载模块:Index
+

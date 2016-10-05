@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>volist和foreach循环数组</title>
+</head>
+<body>
+
+<volist name="person" id="data" offset="1" length="2" empty="none data">
+<p>{$data["name"]} ---volist--- {$data["age"]}</p>
+</volist>
+<br />
+
+<foreach name="person" item="data">
+<p>{$data["name"]} ---foreach--- {$data["age"]}</p>
+</foreach>
+
+</body>
+</html>

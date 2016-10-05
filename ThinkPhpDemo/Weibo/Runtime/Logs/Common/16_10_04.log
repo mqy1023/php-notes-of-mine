@@ -1,0 +1,24 @@
+[ 2016-10-04T18:11:43+08:00 ] ::1 /codes/ThinkPhpDemo/index.php/Common
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000155s ]
+ERR: 无法加载模块:Common
+
+[ 2016-10-04T20:26:40+08:00 ] ::1 /codes/ThinkPhpDemo/admin.php?m=Admin?c=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000501s ]
+ERR: 无法加载模块:Admin?c=index
+
+[ 2016-10-04T20:26:49+08:00 ] ::1 /codes/ThinkPhpDemo/admin.php?m=Admin?c=admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000177s ]
+ERR: 无法加载模块:Admin?c=admin
+
+[ 2016-10-04T20:27:08+08:00 ] ::1 /codes/ThinkPhpDemo/admin.php?m=Admin?c=Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000359s ]
+ERR: 无法加载模块:Admin?c=Admin
+

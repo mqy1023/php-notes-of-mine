@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>系统函数和系统参数</title>
+</head>
+<body>
+{$me['name']|md5|substr=0,5}
+<br />
+{$me['age']|default='22'}
+<br />
+<!-- ###代表$now本身(使用它是为了避免编译程序误解$now为输出值) -->
+{$now|date='Y-m-d H:i:s',###}
+<br />
+{$Think.now}
+<br />
+{$Think.version}
+</body>
+</html>

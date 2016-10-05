@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>for循环和if判断和三元操作符和switch判断和比较/区间标签</title>
+</head>
+<body>
+
+<!-- eq==; neq!=; gt>; egt>=; lt<; elt<=; hep===; nhep!== -->
+
+<for start='1' end='10' comparison='elt' name='item'>
+{$item}</br>
+</for>
+</br>
+
+<!-- 在模板中使用IF,一定要注意elseif 和 else 后面的结束 / -->
+<if condition='$num lt 10'> num小于10
+ <elseif condition='$num gt 10' /> num 大于 10
+ <else /> num 等于 10
+</if>
+<br />
+
+<!-- 三元操作符 -->
+{$num>10?'大于10':'小于或等于10'}
+<br />
+<switch name="name">
+   <case value="teacher">小明，滚出去</case>
+   <case value="xiaohong|xiaohuang">小明，你给我滚出去</case>
+   <delault/>小明，自己滚出去了
+</switch>
+<br />
+
+<!-- <比较标签 name="变量名" value="变量值">输出内容</比较标签> -->
+<eq name="val" value="10">val = 10;</eq>
+<neq name="val" value="10">val !=10; <else/> val == 10; </neq>
+<compare name="val" value="10" type="eq"> val === 10;<else/> val!==10;</compare>
+<br />
+
+<!-- 区间标签：在in notin; 之间between notbetween; range(type选择在/之间) -->
+<in name="rangeVal" value="1,2,3">在1,2,3区间<else/>不在1,2,3区间</in><br/>
+<notin name="rangeVal" value="1,2,3,4">不在,4区间<else/>在1,2,3,4区间</notin><br/>
+<between name="rangeVal" value="1,10">在1与10之间<else/>不在1与10之间</between><br/>
+<notbetween name="rangeVal" value="1,100">确实不在1,100这里!!<else/>在1,100之间</notbetween><br/>
+<range name="rangeVal" value="1,2,3,4,11" type="in">存在<else/>不存在</range>
+
+</body>
+</html>
