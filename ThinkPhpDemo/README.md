@@ -2,7 +2,6 @@
 ## 课程目录
 
 查看Weibo/Home目录.
-
 * 第3章 使用ThinkPHP框架建立项目
 	* 3-1 框架简介 (04:20)
 	* 3-2 ThinkPHP框架学习流程 (01:43)
@@ -20,7 +19,7 @@
 	[新建并配置.htaccess](./.htaccess)
 	* 4-5 URL伪静态 (04:25)
 
-	[查看./Weibo/Common/Conf/config.php](./Weibo/Common/Conf/config.php)
+	[查看./Weibo/Common/Conf/config.php和UserController的test](./Weibo/Common/Conf/config.php).
 	* 4-6 自定义函数库 (03:48)
 
 * 第5章 ThinkPHP框架的模板技术
@@ -32,12 +31,36 @@
 	* 5-6 ThinkPHP模板引擎之volist和foreach循环 (05:52)
 	* 5-7 ThinkPHP模板引擎之FOR循环 (03:40)
 	* 5-8 ThinkPHP模板引擎之IF判断 (03:30).
-
-查看Home/Controller下的IndexController和Home/view的Index目录中文件.
+	
+	查看Home/Controller下的IndexController和Home/view的Index目录中文件.
 
 * [第6章 ThinkPHP框架的调试模式](./Weibo/Common/conf)
 	*  6-1 ThinkPHP的调试方法 (10:24)]
-
+	
+*  第7章 数据库操作（一） 
+	* 7-1 连接数据库 (06:15).
+	
+	查看.Weibo/Common/Conf/config.php的连接数据库配置
+	* 7-2 实例化模型 (17:01).
+	
+	查看./Weibo/Home/Controller/UserContoller和Model/下的UserModel&CommonModel.
+	* 7-3 CURD操作之添加数据 (09:17)
+	* 7-4 CURD操作之查询数据 (21:36)
+	* 7-5 CURD操作之更新数据 (03:27)
+	* 7-6 CURD操作之删除数据 (02:44)
+	
+	查看SqlCURDController控制器.
+*  第8章 数据库操作（二）
+	* 8-1 连贯操作之order排序 (02:50)
+	* 8-2 连贯操作之field方法 (02:27)
+	* 8-3 连贯操作之limit和page方法 (05:28)
+	* 8-4 连贯操作之group和having方法 (02:28)
+	* 8-5 多表查询之table方法 (03:05)
+	* 8-6 多表查询之join方法 (04:55)
+	* 8-7 多表查询之union方法 (05:06)
+	* 8-8 过滤查询之distinct方法 (02:13).
+	
+	查看SqlCURDController和SqlOthersController控制器, 和CommonModel模型
 
 ## 参考链接
 
