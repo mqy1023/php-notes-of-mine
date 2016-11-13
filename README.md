@@ -16,7 +16,7 @@
 * 2、下载一键安装包, 放在MAMP服务器根地址下
 [laravel一键安装包](http://www.golaravel.com/download/)
 
-另外一种安装方式可参考[README.md](./README.md)
+另外一种安装方式可参考[README安装.md](./README安装.md)
 
 ## 《二》、laravel基础(一) ———— 路由和MVC
 #### 一、路由
@@ -35,18 +35,18 @@
   });
   ```
   * 3、多请求路由
-  ```php
+  ```
   // 3、多请求路由
   Route::match(['get', 'post'], 'test', function () {
       return 'match demo!';
   });
-  // 4、响应所有类型路由
+  // 4、响应任意类型路由
   Route::any('any', function () {
       return 'any demo';
   });
   ```
   * 4、路由参数
-  ```php
+  ```
   // 5、路由参数(user/xxx)
   Route::get('user/{id}', function ($id) {
       return 'user--'.$id;
@@ -65,7 +65,7 @@
   })->where(['id' => '[0-9]+', 'name' => '[A-Za-z]+']);
   ```
   * 5、路由别名
-  ```php
+  ```
   // 9、路由别名
   Route::get('user/center', ['as' => 'center', function () {
       // 返回该路由地址:http://localhost:55/laravel/public/user/member-center
@@ -73,7 +73,7 @@
   }]);
   ```
   * 6、路由群组
-  ```php
+  ```
   // 10、路由群组
   Route::group(['prefix' => 'member'], function () {
     Route::get('student', function () {
@@ -86,17 +86,17 @@
   });
   ```
   * 7、路由中输出视图
-  ```php
+  ```
   // 11、路由中输出视图
   Route::get('view', function () {
       return view('welcome');
   });
   ```
 #### 二、控制器
-app/Http/Controllers.
+路径: app/Http/Controllers.
 
 * 1、新建一个控制器
-```php
+```
 <?php
 namespace App\Http\Controllers; // 命名空间
 class MemberController extends Controller {
@@ -106,7 +106,7 @@ class MemberController extends Controller {
 }
 ```
 * 2、路由关联控制器
-```php
+```
 Route::get('info', 'MemberController@info'); // 方式一
 Route::get('infos', ['uses' => 'MemberController@info']); // 方式二(key must be 'uses')
 // a、配合路由别名
@@ -118,14 +118,14 @@ Route::get('infoss', [
 Route::get('info/{id}', 'uses' => 'MemberController@getId')->where('id', '[0-9]+');
 ```
 #### 三、视图
-resources/views/.
+路径: resources/views/*
 
 * 1、怎样新建视图
 info.php / info.blade.php(在resources/views/member/目录下)
 * 2、怎样输出视图
   * a、在routers.php中 `Route::get('info', 'MemberController@viewInfo');`
   * b、在MemberController.php中
-    ```php
+    ```
     // 视图
     public function viewInfo() {
         return view('info');
@@ -214,10 +214,10 @@ info.php / info.blade.php(在resources/views/member/目录下)
   @endforelse
   ```
 #### 四、模型
-在app/目录下.
+路径: 在app/目录下.
 
 * 1、新建模型(app/Member.php)
-```php
+```
 <?php
 namespace App;
 use Illuminate\Database\Eloquent\Model;
@@ -230,8 +230,8 @@ class Member extends Model {
 * 2、路由中.
   Route::get('member', 'MemberController@member');
 * 3、控制器中
-  * a、use App\Member;
-  * b、return Member::getMember();
+  * a、use  App\Member;
+  * b、return  Member::getMember();
 
 ## 《三》、laravel基础(二) ———— 数据库操作
 * 1、laravel三种数据库方式—— —— DB facade(原始查找)、查询构造器、Eloquent ORM.
@@ -341,8 +341,8 @@ public function orm3() {
   * b、把 PHP 代码转成真是的MySQL数据表, 运行命令：`php artisan migrate`
 
   * c、在原来数据库增加一列
-    11、`php artisan make:migration add_intro_column_to_articles --table=articles`
-    22、在AddIntroColumnToArticles中的up增加新字段
+    * 11、`php artisan make:migration add_intro_column_to_articles --table=articles`
+    * 22、在AddIntroColumnToArticles中的up增加新字段
       ```
       public function up() {
           Schema::table('articles', function (Blueprint $table) {
@@ -350,4 +350,4 @@ public function orm3() {
           });
       }
       ```
-    33、执行`php artisan migrate`后可以看到表articles增加了intro列
+    * 33、执行`php artisan migrate`后可以看到表articles增加了intro列
