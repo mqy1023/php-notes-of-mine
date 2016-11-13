@@ -35,6 +35,7 @@
   });
   ```
   * 3、多请求路由
+  
   ```
   Route::match(['get', 'post'], 'test', function () {   // 3、多请求路由
       return 'match demo!';
@@ -44,6 +45,7 @@
   });
   ```
   * 4、路由参数
+
   ```
   Route::get('user/{id}', function ($id) { // 5、路由参数(user/xxx)
       return 'user--'.$id;
@@ -60,6 +62,7 @@
   })->where(['id' => '[0-9]+', 'name' => '[A-Za-z]+']);
   ```
   * 5、路由别名
+
   ```
   Route::get('user/center', ['as' => 'center', function () { // 9、路由别名
       // 返回该路由地址:http://localhost:55/laravel/public/user/member-center
@@ -67,6 +70,7 @@
   }]);
   ```
   * 6、路由群组
+
   ```
   Route::group(['prefix' => 'member'], function () { // 10、路由群组
     Route::get('student', function () {
@@ -84,6 +88,7 @@
       return view('welcome');
   });
   ```
+
 #### 二、控制器
 路径: app/Http/Controllers.
 
