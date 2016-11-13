@@ -36,46 +36,39 @@
   ```
   * 3、多请求路由
   ```
-  // 3、多请求路由
-  Route::match(['get', 'post'], 'test', function () {
+  Route::match(['get', 'post'], 'test', function () {   // 3、多请求路由
       return 'match demo!';
   });
-  // 4、响应任意类型路由
-  Route::any('any', function () {
+  Route::any('any', function () { // 4、响应任意类型路由
       return 'any demo';
   });
   ```
   * 4、路由参数
   ```
-  // 5、路由参数(user/xxx)
-  Route::get('user/{id}', function ($id) {
+  Route::get('user/{id}', function ($id) { // 5、路由参数(user/xxx)
       return 'user--'.$id;
   });
-  //6、路由参数带默认值
-  // Route::get('student/{name?}', function ($name = '11') {
+  // Route::get('student/{name?}', function ($name = '11') { //6、路由参数带默认值
   //     return 'student--'.$name;
   // });
-  // 7、路由参数值类型限定
-  Route::get('student/{name?}', function ($name = 'bean') {
+  Route::get('student/{name?}', function ($name = 'bean') { // 7、路由参数值类型限定
       return 'student--'.$name;
   })->where('name', '[A-Za-z]+'); // 限定参数只能是A-Z/a-z
-  // 8、多参数
-  Route::get('student/{id}/{name?}', function ($id, $name = 'bean') {
+
+  Route::get('student/{id}/{name?}', function ($id, $name = 'bean') { // 8、多参数
       return 'student-id-'.$id.'-name-'.$name;
   })->where(['id' => '[0-9]+', 'name' => '[A-Za-z]+']);
   ```
   * 5、路由别名
   ```
-  // 9、路由别名
-  Route::get('user/center', ['as' => 'center', function () {
+  Route::get('user/center', ['as' => 'center', function () { // 9、路由别名
       // 返回该路由地址:http://localhost:55/laravel/public/user/member-center
       return route('center');
   }]);
   ```
   * 6、路由群组
   ```
-  // 10、路由群组
-  Route::group(['prefix' => 'member'], function () {
+  Route::group(['prefix' => 'member'], function () { // 10、路由群组
     Route::get('student', function () {
         return 'member-student'; // 访问: ..xxx/member/student
     });
@@ -87,8 +80,7 @@
   ```
   * 7、路由中输出视图
   ```
-  // 11、路由中输出视图
-  Route::get('view', function () {
+  Route::get('view', function () { // 11、路由中输出视图
       return view('welcome');
   });
   ```
