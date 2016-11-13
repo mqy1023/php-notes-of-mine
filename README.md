@@ -24,7 +24,7 @@
   在app/Http/routes.php.
 
   * 2、基本路由
-  ```php
+  ```
   // 1、get路由
   Route::get('test1', function () {
       return 'test demo!';
