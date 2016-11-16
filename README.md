@@ -27,9 +27,8 @@ $request->is('student/*');
 ```
 
 > 5、查看当前的URL路径
-```
-$request->url()
-```
+
+`$request->url()`
 
 #### 二、Session
 
@@ -184,7 +183,7 @@ public function activity2() {
 
     ```
 
-    * 中间件的前置和后置操作
+    * 中间件的前置和后置操作.
 
 ## 《二》、玩转Laravel表单
 
