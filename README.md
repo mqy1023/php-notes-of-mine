@@ -5,21 +5,28 @@
 路径: StudentController文件下的request1方法
 
 > 1、查看url是否拥有某个参数
+
 ```
 $request->has('xxx');
 ```
+
 > 2、查看所有的request请求数据
+
 ```
 $request->all();
 ```
+
 > 3、判断请求类型
+
 ```
 $request->method();         //获取请求的方法
 $request->isMethod('get');  //判断是否是get请求
 $request->isMethod('post'); //判断是否是post请求
 $request->ajax();           //判断是否是ajax请求
 ```
+
 > 4、判断是否是属于某个控制器
+
 ```
 // 路由修改为student/xx后为true,http://localhost:55/LaravelForm/public/student/request1?name=mmm&aa=11
 
