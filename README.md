@@ -1,6 +1,6 @@
 # LaravelForm笔记
 
-## Controller介绍
+## 《一》、Controller介绍
 #### 一、Request请求
 路径: StudentController文件下的request1方法
 
@@ -32,6 +32,7 @@ $request->url()
 ```
 
 #### 二、Session
+
 * 1、Session简介
     * 由于HTTP协议是无状态的(Stateles), 所以session提供一种保存用户数据的方法
     * Laravel支持多种session后端驱动,也支持内置支持如: Memcached、Redis和数据库的后端驱动。
@@ -83,12 +84,14 @@ $request->url()
     Session::flash('key-flash', 'value-flash');
     Session::get('key-flash');
     ```
+
 #### 三、Response
 * 1、响应的常见类型
     * 字符串
     * 视图
     * Json
     * 重定向
+
 ```
 // 1、响应json
 $data = [
@@ -113,6 +116,7 @@ return redirect()->route('session2')->with('message', '我是快闪数据');
 // 6、由重定向返回上一页面
 return redirect()->back();
 ```
+
 #### 四、Middleware
 在app/Http/Middleware目录下新建中间件.
 
@@ -121,6 +125,7 @@ return redirect()->back();
 
 * 2、场景举例：
 有一个活动，在指定日期后开始，如果活动没开始，只能访问宣传页面.
+
 ```
 // 对应活动的宣传页面
 public function activity0() {
@@ -137,6 +142,7 @@ public function activity2() {
 ```
     * 新建中间件
     在App\Http\Middleware目录下新建中间件`Activity.php`
+
     ```
     // 在
     <?php
@@ -155,6 +161,7 @@ public function activity2() {
     }
 
     ```
+
     * 注册中间件.
 
     // 上面Activity中间件 --> 对应的是在App\Http下的Kernel.php中的`$routeMiddleware`方法注册该中间件
@@ -162,6 +169,7 @@ public function activity2() {
     // 在该方法中添加以下键值对
     'activity' => \App\Http\Middleware\Activity::class,
     ```
+
     * 使用中间件.
 
     在routes.php路由中
@@ -173,25 +181,33 @@ public function activity2() {
         Route::get('activity1', 'StudentController@activity1');
         Route::get('activity2', 'StudentController@activity2');
     });
+
     ```
+
     * 中间件的前置和后置操作
 
-## 玩转Laravel表单
+## 《二》、玩转Laravel表单
+
 * 1、案例演示
 * 2、静态资源管理及模板布局
 
 将jquery和bootstrap静态资源放在public目录下.
+
 * 3、表单列表及分页实现
 
 // 1、XXXController控制中
+
 ```
 XXXModel::paginate(4); // 分页，每页4条
 
 ```
+
 // 2、view中渲染
+
 ```
 {{ $students->render() }}
 ```
+
 * 4、通过表单实现新增及操作状态提示功能
   * a、通过表单实现模型新增和create新增
     * 在模板中添加各个input的name属性，如：`name="Student[age]"`
@@ -202,8 +218,10 @@ XXXModel::paginate(4); // 分页，每页4条
 【注意】laravel 默认开启了 csrf验证 ，post请求需要验证csrf,所以要在表单里任一行加个token验证的隐藏域,
 `<input type="hidden" name="_token" value="{{ csrf_token() }}">`,
 否则会出现`TokenMismatchException in VerifyCsrfToken.php`
+
 * 5、表单验证及数据保持详解
   * 控制器验证
+
   ```
   $this->Validate($request, [
       'Student.name' => 'required|min:2|max:20',
@@ -220,8 +238,10 @@ XXXModel::paginate(4); // 分页，每页4条
       'Student.sex' => '性别',
   ]);
   ```
+
   * Validator
   * 数据保持
+
   ```
   $validator = \Validator::make($request->input(), [
       'Student.name' => 'required|min:2|max:20',
@@ -247,5 +267,7 @@ XXXModel::paginate(4); // 分页，每页4条
 看Model中的`sexMatch`方法，和blade模板中`<td>{{ $student->sexMatch($student->sex) }}</td>`
 * 7、通过表单实现修改
 * 8、表单中查看详情及删除
+
+##
 
 ![gif](./form.gif)
