@@ -247,3 +247,5 @@ XXXModel::paginate(4); // 分页，每页4条
 看Model中的`sexMatch`方法，和blade模板中`<td>{{ $student->sexMatch($student->sex) }}</td>`
 * 7、通过表单实现修改
 * 8、表单中查看详情及删除
+
+![gif](./form.gif)
