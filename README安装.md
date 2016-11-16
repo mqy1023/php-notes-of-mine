@@ -19,7 +19,8 @@ php -r "unlink('composer-setup.php');"
 `composer create-project laravel/laravel learnlaravel5`
 
 * 5、启动服务器
+
 进入项目根目录下:
   * 方式a、`php -S localhost:7777 -t public`.
     然后在浏览器中输入`localhost:7777`就能看到默认的'Laravel5'网页
-  * 方式b、`php artisan serve`, 启动服务后访问 http://localhost:8000/ 
+  * 方式b、`php artisan serve`, 启动服务后访问 http://localhost:8000/
